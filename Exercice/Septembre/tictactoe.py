@@ -28,6 +28,7 @@ def place(grid, player):
     while not correctPlace:
         if player:
             try:
+
                 printGrid(grid)
                 print("""Choisissez une case (libre) entre 1 et 9
  1 | 2 | 3 
@@ -45,17 +46,17 @@ def place(grid, player):
     return not player
 
 def checkFinished(grille):
-    win = " "
+    gagne = " "
     for i in range(len(grille[0])):
         if grille[0][i] == grille[1][i] == grille[2][i] and grille[0][i] != " ":
-            win = grille[0][i]
+            gagne = grille[0][i]
     for ligne in grille:
         if ligne[0] == ligne[1] == ligne[2] and ligne[0] != " ":
-            win = ligne[0]
+            gagne = ligne[0]
     if (grille[0][0] == grille[1][1] == grille[2][2] and grille[0][0] != " ") or (grille[2][0] == grille[1][1] == grille[0][2] and grille[0][0] != " "):
-        win = grille[1][1]
-    if win != " ":
-        if win == "X":
+        gagne = grille[1][1]
+    if gagne != " ":
+        if gagne == "X":
             print("Le joueur a gagné")
         else:
             print("Le PC a gagné")
@@ -84,4 +85,3 @@ else:
 
 while not checkFinished(grid):
     player = place(grid, player)
-
