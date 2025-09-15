@@ -44,16 +44,16 @@ def place(grid, player):
             correctPlace, grid = placeSign(grid, random.randint(1, 9), "0")
     return not player
 
-def checkFinished(grid):
+def checkFinished(grille):
     win = " "
-    for i in range(len(grid[0])):
-        if grid[0][i] == grid[1][i] == grid[2][i] and grid[0][i] != " ":
-            win = grid[0][i]
-    for row in grid:
-        if row[0] == row[1] == row[2] and row[0] != " ":
-            win = row[0]
-    if (grid[0][0] == grid[1][1] == grid[2][2] and grid[0][0] != " ") or (grid[2][0] == grid[1][1] == grid[0][2] and grid[0][0] != " "):
-        win = grid[1][1]
+    for i in range(len(grille[0])):
+        if grille[0][i] == grille[1][i] == grille[2][i] and grille[0][i] != " ":
+            win = grille[0][i]
+    for ligne in grille:
+        if ligne[0] == ligne[1] == ligne[2] and ligne[0] != " ":
+            win = ligne[0]
+    if (grille[0][0] == grille[1][1] == grille[2][2] and grille[0][0] != " ") or (grille[2][0] == grille[1][1] == grille[0][2] and grille[0][0] != " "):
+        win = grille[1][1]
     if win != " ":
         if win == "X":
             print("Le joueur a gagné")
@@ -62,8 +62,8 @@ def checkFinished(grid):
         return True
     else:
         cpt = 0
-        for row in grid:
-            for cell in row:
+        for ligne in grille:
+            for cell in ligne:
                 if cell == " ":
                     cpt += 1
         if cpt == 0:
