@@ -75,7 +75,7 @@ grid = createGrid()
 a = int("a")
 player = random.choice([True, False])
 #choisi qui joue en premier, si True, c'est le joeur sinon, c'est le cpt
-print("coucou")
+print("coucou3")
 if not player:
     player = place(grid, player)
     print("Le PC commence")
