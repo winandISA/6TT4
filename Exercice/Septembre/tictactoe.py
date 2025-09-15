@@ -72,7 +72,7 @@ def checkFinished(grid):
     return False
 
 grid = createGrid()
-
+a = int("a")
 player = random.choice([True, False])
 #choisi qui joue en premier, si True, c'est le joeur sinon, c'est le cpt
 if not player:
