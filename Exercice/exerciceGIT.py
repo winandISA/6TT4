@@ -1,4 +1,4 @@
-Biblio = {"Martine à la ferme": ["Martine à la ferme","Martin", "1975", "Jeunesse"]}
+Biblio = {"Martine à la ferme": ["Martine à la ferme","Martin", "1975", "Jeungrtesse"]}
 Continue = True
 while Continue:
     titre = input("Titre: ")
