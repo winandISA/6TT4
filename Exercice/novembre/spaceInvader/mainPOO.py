@@ -1,14 +1,13 @@
 import pygame
 
-from sources.Asset import Fond, Joueur, Rocket
-from sources.Game import Game
+from exercices.novembre.spaceInvader.sources.Asset import Fond, Joueur, Rocket
+from exercices.novembre.spaceInvader.sources.Game import Game
 
 WIDTH = 1024
 HEIGHT = 768
 pygame.init()
 fenetre = pygame.display.set_mode((WIDTH, HEIGHT))
-
-game = Game(Fond(), Joueur(WIDTH//2, HEIGHT//2), fenetre)
+game = Game(fenetre)
 
 clock = pygame.time.Clock()
 running = True
@@ -26,7 +25,7 @@ while running:
     if keys[pygame.K_SPACE]:
         if pygame.time.get_ticks() - lastRocket > 100:
             lastRocket = pygame.time.get_ticks()
-            game.addRocket(Rocket(pygame.mouse.get_pos(), WIDTH//2, HEIGHT//2))
+            game.addRocket(pygame.mouse.get_pos())
 
     game.move(pygame.mouse.get_pos())
 

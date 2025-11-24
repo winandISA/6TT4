@@ -6,6 +6,9 @@ class Asset(ABC):
         self.image = image
         self.rect = rect
 
+    def getRectXY(self):
+        return self.rect.center
+
     @abstractmethod
     def bouge(self, event):
         pass

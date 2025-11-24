@@ -2,9 +2,9 @@ from .Asset import *
 import pygame
 
 class Game():
-    def __init__(self, fond, player, win):
-        self.fond = fond
-        self.player = player
+    def __init__(self, win):
+        self.fond = Fond()
+        self.player = Joueur(win.get_width()//2, win.get_height()//2)
         self.rocket = []
         self.win = win
 
@@ -14,8 +14,9 @@ class Game():
     def getPlayer(self):
         return self.player
 
-    def addRocket(self, rocket):
-        self.rocket.append(rocket)
+    def addRocket(self, mouse):
+        x, y = self.player.getRectXY()
+        self.rocket.append(Rocket(mouse, x, y))
 
     def move(self, mousePos):
         self.player.bouge(mousePos)
