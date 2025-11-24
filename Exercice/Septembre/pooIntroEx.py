@@ -18,6 +18,12 @@ class Personnage():
     def nom(self):
         return self.__nom
 
+    def getNom(self):
+        return self.__nom
+
+    def setNom(self, nom):
+        self.__nom = nom
+
     @property
     def pv(self):
         return self.__pv

@@ -44,6 +44,7 @@ class Parking(object):
     def places_occupee(self):
         return self.__compterPlaces(self)[1]
 
+    @classmethod
     def nbrPlacesLibres(self):
         return len(self.__compterPlaces(self)[0])
 
