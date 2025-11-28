@@ -18,3 +18,4 @@ if mario.pv != 0:
     print("Mario a gagné")
 else:
     print("Bowser a gagné")
+
