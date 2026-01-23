@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 
-from exercices.tkinter.classes.Page.BasePage import BasePage
-from exercices.tkinter.classes.db.DAO import UserDao
+from tkinter_ex.classes.Page.BasePage import BasePage
+from tkinter_ex.classes.Page.LogIn import LogIn
+from tkinter_ex.classes.db.DAO import UserDao
 
 
 class CreateUserPage(BasePage):
@@ -54,5 +55,4 @@ class CreateUserPage(BasePage):
             messagebox.showerror("Erreur", f"Le nom '{nom}' existe déjà.")
 
     def handle_switch(self):
-        from exercices.tkinter.classes.Page.LogIn import LogIn
         self.controller.show_page(LogIn)

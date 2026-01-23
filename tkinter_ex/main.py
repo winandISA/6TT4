@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from exercices.tkinter.classes.Page.LogIn import LogIn
-from exercices.tkinter.classes.db.DbConnection import DbConnection
+from tkinter_ex.classes.Page.LogIn import LogIn
+from tkinter_ex.classes.db.DbConnection import DbConnection
 
 
 class Main:

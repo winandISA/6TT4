@@ -1,7 +1,8 @@
 import sqlite3
 from abc import ABCMeta, ABC, abstractmethod
 
-from exercices.tkinter.classes.db.DbConnection import DbConnection
+from tkinter_ex.classes.db.DbConnection import DbConnection
+
 
 class DAO(ABC):
     def __init__(self):

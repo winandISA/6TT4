@@ -3,11 +3,9 @@
 # =========================
 from tkinter import messagebox, ttk
 
-import tkinter as tk
-
-from exercices.tkinter.classes.Page.BasePage import BasePage
-
-from exercices.tkinter.classes.db.DAO import UserDao
+from tkinter_ex.classes.Page.BasePage import BasePage
+from tkinter_ex.classes.Page.CreateUser import CreateUserPage
+from tkinter_ex.classes.db.DAO import UserDao
 
 
 class LogIn(BasePage):
@@ -64,5 +62,4 @@ class LogIn(BasePage):
             self.combo_user.set("")  # vide si aucun user
 
     def handle_switch(self):
-        from exercices.tkinter.classes.Page.CreateUser import CreateUserPage
         self.controller.show_page(CreateUserPage)
