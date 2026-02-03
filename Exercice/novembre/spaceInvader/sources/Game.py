@@ -1,4 +1,4 @@
-from .Asset import *
+from Asset import *
 import pygame
 
 class Game():
